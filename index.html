@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="title">
+                <i class="fas fa-calculator"></i> Calculator
+            </h1>
+            <p class="subtitle">Simple & Powerful</p>
+        </header>
+
+        <!-- Theme Switcher -->
+        <div class="theme-switcher">
+            <button class="theme-btn" id="themeBtn" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+
+        <!-- Main Calculator -->
+        <main class="calculator">
+            <!-- Display Screen -->
+            <div class="display-container">
+                <div class="display-history" id="history"></div>
+                <input 
+                    type="text" 
+                    class="display-input" 
+                    id="display" 
+                    placeholder="0" 
+                    readonly
+                >
+            </div>
+
+            <!-- Button Grid -->
+            <div class="button-grid">
+                <!-- Row 1: Clear & Operations -->
+                <button class="btn btn-clear" id="btnClear">
+                    <i class="fas fa-trash-alt"></i> C
+                </button>
+                <button class="btn btn-delete" id="btnDelete">
+                    <i class="fas fa-backspace"></i>
+                </button>
+                <button class="btn btn-percent" id="btnPercent">%</button>
+                <button class="btn btn-operator" data-operator="/">
+                    <i class="fas fa-divide"></i>
+                </button>
+
+                <!-- Row 2: Numbers 7-9 -->
+                <button class="btn btn-number" data-number="7">7</button>
+                <button class="btn btn-number" data-number="8">8</button>
+                <button class="btn btn-number" data-number="9">9</button>
+                <button class="btn btn-operator" data-operator="*">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <!-- Row 3: Numbers 4-6 -->
+                <button class="btn btn-number" data-number="4">4</button>
+                <button class="btn btn-number" data-number="5">5</button>
+                <button class="btn btn-number" data-number="6">6</button>
+                <button class="btn btn-operator" data-operator="-">−</button>
+
+                <!-- Row 4: Numbers 1-3 -->
+                <button class="btn btn-number" data-number="1">1</button>
+                <button class="btn btn-number" data-number="2">2</button>
+                <button class="btn btn-number" data-number="3">3</button>
+                <button class="btn btn-operator" data-operator="+">+</button>
+
+                <!-- Row 5: Zero & Decimal -->
+                <button class="btn btn-number btn-zero" data-number="0">0</button>
+                <button class="btn btn-decimal" id="btnDecimal">.</button>
+                <button class="btn btn-equals" id="btnEquals">
+                    <i class="fas fa-equals"></i>
+                </button>
+            </div>
+
+            <!-- Extra Features -->
+            <div class="extra-features">
+                <button class="btn btn-extra" id="btnSquare" title="Square (x²)">x²</button>
+                <button class="btn btn-extra" id="btnSqrt" title="Square Root">√</button>
+                <button class="btn btn-extra" id="btnReciprocal" title="Reciprocal (1/x)">1/x</button>
+                <button class="btn btn-extra" id="btnNegate" title="Negate (-x)">±</button>
+            </div>
+
+            <!-- Keyboard Info -->
+            <div class="keyboard-info">
+                <p><strong>⌨️ Keyboard Shortcuts:</strong></p>
+                <div class="shortcuts-grid">
+                    <span>Enter or = : Calculate</span>
+                    <span>Delete : Delete last</span>
+                    <span>Escape : Clear all</span>
+                    <span>. : Decimal point</span>
+                </div>
+            </div>
+
+            <!-- History Panel -->
+            <div class="history-panel" id="historyPanel">
+                <div class="history-header">
+                    <h3>Calculation History</h3>
+                    <button class="btn-clear-history" id="btnClearHistory">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="empty-history">No history yet</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Advanced Calculator. Designed with <i class="fas fa-heart"></i> by Developer</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
